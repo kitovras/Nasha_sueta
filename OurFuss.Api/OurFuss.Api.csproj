@@ -8,16 +8,24 @@
 
   <ItemGroup>
     <Compile Remove="Libraries\**" />
+    <Compile Remove="ViewModels\**" />
     <Content Remove="Libraries\**" />
+    <Content Remove="ViewModels\**" />
     <EmbeddedResource Remove="Libraries\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
     <None Remove="Libraries\**" />
+    <None Remove="ViewModels\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <None Remove=".gitignore" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 

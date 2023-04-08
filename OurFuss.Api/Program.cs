@@ -1,4 +1,4 @@
-using OurFuss.Extensions.Configurations;
+using OurFuss.Api.Infrastructure.Extensions;
 
 //Получаем сборщик
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +8,9 @@ builder.Services.AddDbContext(builder.Configuration);
 
 //Подрубаем контроллеры
 builder.Services.AddControllers();
+
+//Подключаем сервисы из Core
+builder.Services.AddServices();
 
 //Подрубаем зависимости для свагера
 builder.Services.AddSwaggerGen();
@@ -21,14 +24,15 @@ app.UseStaticFiles();
 //Подключаем роутинг
 app.UseRouting();
 
-//Подключаем дефолтную схему роут-маршрута
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
-
 //Подключаем свагер
 app.UseSwagger();
 app.UseSwaggerUI();
+
+//Подключаем дефолтную схему роут-маршрута
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 //Запускаем приложение
 app.Run();
