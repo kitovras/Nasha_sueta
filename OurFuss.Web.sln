@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{FC5C04C2-B9E0-462C-B0BE-DEE699FD9E80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{B6FF65A5-3FEE-49C6-B5B0-ECE7BDBB66BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurFuss.Core", "src\libs\OurFuss.Core\OurFuss.Core.csproj", "{DD4375FE-013E-4F6A-8EA5-45B89869BEE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurFuss.Data.Postgre", "src\libs\OurFuss.Data.Postgre\OurFuss.Data.Postgre.csproj", "{A52A8986-D856-4A8B-824E-53F1A6323A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurFuss.Background", "src\libs\OurFuss.Background\OurFuss.Background.csproj", "{170E78A5-F52C-4DA7-8370-1BC27F9B5C02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurFuss.TelegramBot", "src\utils\OurFuss.TelegramBot\OurFuss.TelegramBot.csproj", "{8B980E7F-0DAE-4F54-840E-B378E337F6E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurFuss.Web", "src\presentation\OurFuss.Web\OurFuss.Web.csproj", "{FC5B60DC-40A0-4C83-9022-81329491200A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD4375FE-013E-4F6A-8EA5-45B89869BEE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD4375FE-013E-4F6A-8EA5-45B89869BEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD4375FE-013E-4F6A-8EA5-45B89869BEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD4375FE-013E-4F6A-8EA5-45B89869BEE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52A8986-D856-4A8B-824E-53F1A6323A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52A8986-D856-4A8B-824E-53F1A6323A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52A8986-D856-4A8B-824E-53F1A6323A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52A8986-D856-4A8B-824E-53F1A6323A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{170E78A5-F52C-4DA7-8370-1BC27F9B5C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170E78A5-F52C-4DA7-8370-1BC27F9B5C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170E78A5-F52C-4DA7-8370-1BC27F9B5C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170E78A5-F52C-4DA7-8370-1BC27F9B5C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B980E7F-0DAE-4F54-840E-B378E337F6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B980E7F-0DAE-4F54-840E-B378E337F6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B980E7F-0DAE-4F54-840E-B378E337F6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B980E7F-0DAE-4F54-840E-B378E337F6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5B60DC-40A0-4C83-9022-81329491200A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5B60DC-40A0-4C83-9022-81329491200A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5B60DC-40A0-4C83-9022-81329491200A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5B60DC-40A0-4C83-9022-81329491200A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD4375FE-013E-4F6A-8EA5-45B89869BEE5} = {B6FF65A5-3FEE-49C6-B5B0-ECE7BDBB66BA}
+		{A52A8986-D856-4A8B-824E-53F1A6323A84} = {B6FF65A5-3FEE-49C6-B5B0-ECE7BDBB66BA}
+		{170E78A5-F52C-4DA7-8370-1BC27F9B5C02} = {FC5C04C2-B9E0-462C-B0BE-DEE699FD9E80}
+		{8B980E7F-0DAE-4F54-840E-B378E337F6E5} = {FC5C04C2-B9E0-462C-B0BE-DEE699FD9E80}
+	EndGlobalSection
+EndGlobal

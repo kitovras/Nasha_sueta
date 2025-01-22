@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - ./initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - 8002:5432
+    environment:
+        POSTGRES_DB: OurFuss
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: 123456
+  server:
+    build:
+      context: .
+      target: final
+    ports:
+      - 8080:8080
