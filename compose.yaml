@@ -11,11 +11,35 @@ services:
         POSTGRES_DB: OurFuss
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: 123456
+    networks:
+      - postgres
+
+  pgadmin:
+    image: dpage/pgadmin4:7.2
+    restart: unless-stopped
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.ru"
+      PGADMIN_DEFAULT_PASSWORD: "admin@admin.ru"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    networks:
+      - postgres
+
   server:
     build:
       context: .
       target: final
     ports:
       - 8080:8080
+    networks:
+      - postgres
 
+volumes:
+  pgadmin-data:
 
+networks:
+  postgres:
+    driver: bridge
